@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 966px;
+  padding: 50px 15px 15px;
+}
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: rgb(0, 47, 255);
+}
+.todo-app {
+  grid-gap: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  .todo-input {
+    max-width: 720px;
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(0, 47, 255);
+    border-color: rgb(0, 47, 255);
+    outline: none;
+    &::placeholder {
+      color: rgb(0, 47, 255);
+    }
+  }
+  .addTodo {
+    background: #42b72a;
+    border: 2px solid #42b72a;
+    &:hover {
+      color: #42b72a;
+      background: #fff;
+    }
+  }
+  .removeTodo {
+    background: crimson;
+    border: 2px solid crimson;
+    &:hover {
+      color: crimson;
+      background: #fff;
+    }
+  }
+}
+.todo-app .todo-buttons {
+  display: flex;
+  grid-gap: 10px;
+}
+.todo-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(66, 154, 255);
+  background-color: rgba(66, 154, 255,.1);
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  .todo-block-btn {
+    display: flex;
+    grid-gap: 15px;
+    .btn {
+      padding: 7px 15px;
+      border-radius: 5px;
+    }
+    .removeItem {
+      background-color: crimson;
+      border: 2px solid crimson;
+      &:hover {
+        background-color: #fff;
+        color: crimson;
+      }
+    }
+    .impBtn {
+      background-color: rgb(255, 208, 0);
+      border: 2px solid rgb(255, 208, 0);
+      &:hover {
+        background-color: #fff;
+        color: rgb(255, 208, 0);
+      }
+    }
+  }
+  .todo-text {
+    span {
+      color: rgb(0, 47, 255);
+      font-size: 18px;
+    }
+  }
+}
+.btn {
+  padding: 7px 12px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s all;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  word-wrap: break-word;
+}
+.important {
+  background-color: rgb(255, 208, 0);
+  color: #fff;
+  border: 1px solid rgb(255, 208, 0);
+  .impBtn {
+    border: 2px solid #fff !important;
+  }
+}
+.fas {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media screen and(max-width:574px) {
+  .btn {
+    font-size: 12px !important;
+  }
+  .todo-app {
+    grid-gap: 10px;
+  }
+  .todo-block .todo-block-btn {
+    grid-gap: 10px;
+    .btn {
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+  }
+  .todo-block .todo-text span {
+    font-size: 14px;
+  }
+  .todo-app .todo-input {
+    font-size: 15px;
+  }
+}
